@@ -58,7 +58,7 @@ h1 {
     font-weight: var(--fw-bold);
     color: var(--clr-dark-blue);
     text-align: center;
-    font-size: 2rem;
+    font-size: 1.8rem;
     margin-top: 3.5rem;
     line-height: 1rem;
 }
