@@ -68,8 +68,9 @@ h1 {
 .description {
     color: var(--clr-desaturated-blue);
     font-weight: var(--fw-light);
-    font-size: 1.1rem;
     margin: 2rem;
+    width: 80%;
+    line-height: 1.6rem;
 }
     
 .card-container {
