@@ -12,11 +12,14 @@
     --clr-dark-blue: hsl(223, 47%, 23%);
 }
 
-* {
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
     padding: 0;
     margin: 0;
-    box-sizing: border-box;
 }
+
 
 body {
     background-color: var(--clr-pale-blue);
@@ -28,12 +31,13 @@ body {
     place-content: center;
     min-height: 100vh;
     font-family: var(--ff-sans);
+    text-align: center;
 }
 
 .card {
     background-color: var(--clr-white);
     border-radius: 20px;
-    max-width: 450px;
+    max-width: 28.125rem;
     position: relative;
     display: grid;
     flex-direction: column;
@@ -46,8 +50,6 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    text-align: center;
-    border-radius: 20px;
 }
 
 .header-img {
@@ -58,14 +60,12 @@ body {
 h1 {
     font-weight: var(--fw-bold);
     color: var(--clr-dark-blue);
-    text-align: center;
-    font-size: 1.8rem;
+    font-size: 1.8em;
     margin-top: 3.5rem;
     line-height: 1rem;
 }
 
 .description {
-    text-align: center;
     color: var(--clr-desaturated-blue);
     font-weight: var(--fw-light);
     font-size: 1.1rem;
@@ -79,7 +79,7 @@ h1 {
     align-items: center;
 }
 
-.card-container .icon {
+.card-container img {
     display: block;
 }
 
@@ -90,26 +90,27 @@ h1 {
 .plan {
     color: var(--clr-dark-blue);
     font-weight: var(--fw-bold);
-    font-size: 1rem;
 }
 
 .price {
     color: var(--clr-desaturated-blue);
     font-weight: var(--fw-light);
-    font-size: 1rem;
     margin-top: 0.3rem;
 }
 
-.card-container a {
+.card-container button {
     color: var(--clr-bright-blue);
     font-weight: var(--fw-normal);
-    font-size: 1rem;
     margin-left: auto;
+    border: none;
+    text-decoration: underline;
+    font-size: 0.9rem
 }
 
-.card-container a:hover{
+.card-container button:hover {
     color: hsl(247, 89%, 78%) ;
     text-decoration: none;
+    cursor: pointer;
 }
 
 .payment {
@@ -117,43 +118,47 @@ h1 {
     color: var(--clr-white);
     display: block;
     width: 80%;
-    font-size: .95rem;
-    font-weight: var(--fw-bold);
+    font-weight: var(--fw-normal);
     text-align: center;
-    padding: 15px 0;
+    padding: 17px;
     margin: 2rem;
-    border-radius: 10px;
+    border: none;
+    border-radius: 12px;
     box-shadow: 0 10px 20px hsl(0, 0%, 75%);
     text-decoration: none;
+    font-size: .9rem;
 }
 
-.payment:hover{
+.payment:hover {
     background-color:hsl(248, 82%, 67%);
+    cursor: pointer;
 }
 
 .cancel {
     text-align: center;
     color: var(--clr-desaturated-blue);
-    font-weight: var(--fw-bold);
-    font-size: 1rem;
+    font-weight: var(--fw-normal);
     text-decoration: none;
-    padding-bottom: 2.5rem;
+    border: none;
+    margin-bottom: 3rem;
+    font-size: .9rem;
 }
 
-.cancel:hover{
-    color: var(--clr-dark-blue);
+.cancel:hover {
+    color: black;
+    cursor: pointer;
 }
 
 .author { 
-    font-size: 11px; text-align: center; 
+    font-size: .7rem;
     padding-top: 1rem;
 }
 
 .author a { 
-    color: hsl(228, 45%, 44%); 
+    color: hsl(246, 45%, 44%); 
 }
 
-@media only screen and (max-width: 375px) {
+@media only screen and (max-width: 23.5rem) {
     body {
       background-image: url(./images/pattern-background-mobile.svg);
       background-repeat: no-repeat;
